@@ -1,0 +1,128 @@
+### README for ParseInbox Email Parser Application
+
+This README provides instructions for setting up, installing, and running the **ParseInbox** application, which is designed to parse email content and extract relevant details such as requestor email, client name, contract information, and user details. The application is built using Python and the Tkinter GUI framework.
+
+---
+
+## Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+   - [Prerequisites](#prerequisites)
+      - [Install Dependencies](#install-dependencies)
+      3. [Running the Application](#running-the-application)
+      4. [Compiling the Application](#compiling-the-application)
+         - [Using `pyinstaller` on Linux](#using-pyinstaller-on-linux)
+            - [Using `pyinstaller` on Windows](#using-pyinstaller-on-windows)
+            5. [Usage](#usage)
+            6. [Troubleshooting](#troubleshooting)
+            7. [License](#license)
+
+            ---
+
+            ## Features
+            - **Email Parsing**: Extracts key details from email content.
+            - **General Information**: Displays requestor email, client name, contract name, contract ID, and access level.
+            - **User Details**: Parses and displays user information (first name, last name, email, and phone number).
+            - **Copy to Clipboard**: Allows copying of extracted details to the clipboard.
+            - **Cross-Platform**: Works on both Linux and Windows.
+
+            ---
+
+            ## Installation
+
+            ### Prerequisites
+            - Python 3.6 or higher.
+            - `pip` (Python package manager).
+
+            ### Install Dependencies
+            1. Clone or download the repository containing the script.
+            2. Navigate to the directory where the script is located.
+            3. Install the required Python packages using `pip`:
+
+               ```bash
+                  pip install tkinter pyperclip
+                     ```
+
+                        - `tkinter`: For the GUI (usually included with Python).
+                           - `pyperclip`: For copying text to the clipboard.
+
+                           ---
+
+                           ## Running the Application
+                           1. Save the script as `parse_inbox.py`.
+                           2. Run the script using Python:
+
+                              ```bash
+                                 python parse_inbox.py
+                                    ```
+
+                                    3. The application window will open. Paste the email content into the input box and click **Extract** to parse the details.
+
+                                    ---
+
+                                    ## Compiling the Application
+                                    To compile the script into an executable, use `pyinstaller`. This allows you to run the application without requiring Python to be installed.
+
+                                    ### Using `pyinstaller` on Linux
+                                    1. Install `pyinstaller`:
+
+                                       ```bash
+                                          pip install pyinstaller
+                                             ```
+
+                                             2. Navigate to the directory containing `parse_inbox.py`.
+                                             3. Compile the script:
+
+                                                ```bash
+                                                   pyinstaller --onefile --windowed parse_inbox.py
+                                                      ```
+
+                                                      4. The executable will be located in the `dist` directory. Run it with:
+
+                                                         ```bash
+                                                            ./dist/parse_inbox
+                                                               ```
+
+                                                               ### Using `pyinstaller` on Windows
+                                                               1. Install `pyinstaller`:
+
+                                                                  ```bash
+                                                                     pip install pyinstaller
+                                                                        ```
+
+                                                                        2. Open a command prompt and navigate to the directory containing `parse_inbox.py`.
+                                                                        3. Compile the script:
+
+                                                                           ```bash
+                                                                              pyinstaller --onefile --windowed parse_inbox.py
+                                                                                 ```
+
+                                                                                 4. The executable (`parse_inbox.exe`) will be located in the `dist` directory. Double-click to run it.
+
+                                                                                 ---
+
+                                                                                 ## Usage
+                                                                                 1. **Paste Email Content**: Copy and paste the email content into the input box on the left.
+                                                                                 2. **Extract Details**: Click the **Extract** button to parse the email and display the extracted details.
+                                                                                 3. **Copy to Clipboard**: Use the **Copy** buttons next to each field to copy the extracted information.
+                                                                                 4. **View User Details**: Select a user from the table to view their full details in the **User Details** section.
+
+                                                                                 ---
+
+                                                                                 ## Troubleshooting
+                                                                                 - **Missing Dependencies**: Ensure all dependencies are installed using `pip`.
+                                                                                 - **Clipboard Issues**: If copying to the clipboard fails, ensure `pyperclip` is installed and your system supports clipboard operations.
+                                                                                 - **GUI Not Displaying**: Ensure you are running the script in an environment that supports GUI applications (e.g., not a headless server).
+
+                                                                                 ---
+
+                                                                                 ## License
+                                                                                 This project is open-source and available under the MIT License. Feel free to modify and distribute it as needed.
+
+                                                                                 ---
+
+                                                                                 For more information, visit the [GitHub repository](#) or contact the developer at [msantosuk](#).
+
+                                                                                 ---
+
+                                                                                 Enjoy using
